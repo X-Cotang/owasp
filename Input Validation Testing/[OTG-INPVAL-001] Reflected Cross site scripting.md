@@ -14,8 +14,14 @@
     * **Các input dễ bị tấn công:** ?search=,?page=,?document=,?user=,...
 2. Phân tích từng vector 
     * Người kiểm tra fuzz các kí tự và các từ khóa nhạy cảm,vô hại để phát hiện lỗ hổng trong ứng dụng web.
-    * **Các kí tự nhạy cảm:** <,>,/,script,alert,...
-
+    * **Các kí tự nhạy cảm:** <,>,/,script,alert,',...
+Example: Input
 ```
-<script>alert(123)</script>
+<script>alert(document.cookie)</script>
 ```
+3. Phân tích kết quả
+    * Người kiểm tra xác định bất kỳ ký tự đặc biệt nào không được mã hóa, thay thế hoặc lọc đúng
+    * Các kí tự HTML đặc biệt cần phải được thay thế bằng HTML entities hoặc replace,encode,...
+## Example
+### Example 1:
+![]
