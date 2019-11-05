@@ -8,13 +8,14 @@
 ## Reason
 - Server không kiểm soát giá trị input người dùng nhập vào trước khi trả về cho trình duyệt
 - Người dùng sử dụng các trình duyệt đã lỗi thời
-- Nạn nhân bị lừa ấn vào đường link có chứa mã độc
+- Sự chủ quan, thiếu kiến thức và sự đề phòng của nạn nhân
 ## Exploit
 1. Phát hiện input vector  
     * Đối với mỗi trang web, người kiểm tra phải xác định tất cả các input do người dùng định nghĩa và cách nhập chúng
     * **Các input dễ bị tấn công:** ?search=,?page=,?document=,?user=,...
 2. Phân tích từng vector 
     * Người kiểm tra fuzz các kí tự và các từ khóa nhạy cảm,vô hại để phát hiện lỗ hổng trong ứng dụng web.
+    * Phát hiện các input cho phép hiển thị kết quả được nhập vào!
     * **Các kí tự nhạy cảm:** <,>,/,script,alert,',...
 Example: Input
 ```
@@ -43,7 +44,7 @@ Example: Input
 
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/001-5.png)  
 
-* Ta sử dụng payload ```<script>alert(1)</script>``` để kiểm tra.Nhưng lần này đoạn code ta inject đã không được thực thi.Thay vào đó kết quả trả về là **Hello alert(1);**.Ấn ctrl+u hoặc f12 kiểm tra raw response:  
+* Ta sử dụng payload ```<script>alert(1)</script>``` để kiểm tra. Nhưng lần này đoạn code ta inject đã không được thực thi. Thay vào đó kết quả trả về là **Hello alert(1);**. Ấn **ctrl+u** hoặc **f12** kiểm tra raw response:  
 
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/001-6.png)
 
