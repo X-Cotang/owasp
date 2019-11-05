@@ -1,6 +1,6 @@
 ## Description
 - Kỹ thuật XSS được thực hiện dựa trên việc chèn các đoạn script nguy hiểm vào trong source code ứng dụng web. Nhằm thực thi các đoạn mã độc Javascript để chiếm phiên đăng nhập của người dùng
-- Mã độc được tiêm vào url và gửi đến cho nạn nhân, nạn nhân ấn vào đường link có chứa mã độc và hacker sẽ nhận được respond chứa kết quả mong muốn.
+- Mã độc được tiêm vào url và gửi đến cho nạn nhân, nạn nhân ấn vào đường link có chứa mã độc và hacker sẽ nhận được response chứa kết quả mong muốn.
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/1%20o_asKsD_JqunhqggHoxodw.png)  
 
 ##### Example:
@@ -39,3 +39,18 @@ Example: Input
 
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/001-4.png "dữ liệu xử lí không được filter")
 ### Example 2:
+- Chúng ta sẽ tiếp tục ví dụ trên nhưng ở mức độ nâng cao hơn một chút  
+
+![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/001-5.png)  
+
+* Ta sử dụng payload ```<script>alert(1)</script>``` để kiểm tra.Nhưng lần này đoạn code ta inject đã không được thực thi.Thay vào đó kết quả trả về là **Hello alert(1);**.Ấn ctrl+u hoặc f12 kiểm tra raw response:  
+
+![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/001-6.png)
+
+* Oh!!! Ta thấy ngay từ khóa ```<script>``` đã bị filter  
+
+![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/001-7.png)  
+
+* Đối với dạng filter lỏng lẻo như thế này chúng ta có thể bypass bằng payload có dạng như sau: ```<scr<script>ipt>alert(1);</script>```  
+
+![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/001-8.png)
