@@ -1,4 +1,6 @@
 # Description
+- Phát hiện / trinh sát bằng công cụ tìm kiếm để rò rỉ thông tin là bước vô cùng quan trọng. Nó là tiền đề cho các cuộc tấn công an ninh mạng
+
 # Exploit
 - Sử dụng search engine để tìm kiếm:
     *  Network diagrams và configurations
@@ -17,6 +19,9 @@
 - Ta sẽ dùng các công cụ để tìm kiếm thông tin liên quan đến trang web như: Thông tin quản trị viên, thông tin server ,...
 
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/image/001-6.png)  
+- Thông tin trên facebook
+
+![](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/image/001-8.png)  
 
 - Kiểm tra file robots.txt:  
 
@@ -26,11 +31,11 @@
 
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/image/001-3.png)
 
-- Các dự án của quản trị viên này tham gia: 
+- Các dự án của devoloper này tham gia: 
 
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/image/001-4.png)
 
-- Test thử một project khác của quản trị viên này ta được:
+- Test thử một project khác của devoloper này ta được:
 
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/image/001-5.png)  
 
