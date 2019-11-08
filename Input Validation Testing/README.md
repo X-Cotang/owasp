@@ -1,4 +1,5 @@
 # Input Validation Testing
+### Checklist
 1. [(OTG-INPVAL-001) Testing for Reflected Cross Site Scripting ](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/%5BOTG-INPVAL-001%5D%20Reflected%20Cross%20site%20scripting.md)  
 2. [(OTG-INPVAL-002) Testing for Stored Cross Site Scripting ](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/%5BOTG-INPVAL-002%5D%20Stored%20Cross%20site%20scripting%20.md)  
 3. [(OTG-INPVAL-003) Testing for HTTP Verb Tampering ]()  
@@ -16,3 +17,5 @@
 15. [(OTG-INPVAL-015) Testing for incubated vulnerabilities]()  
 16. [(OTG-INPVAL-016) Testing for HTTP Splitting/Smuggling ]()  
 17. [(OTG-INPVAL-017) Testing for HTTP Incoming Requests ]()  
+### Advanced
+- [(XSS) Bypass XSS-Auditor]()

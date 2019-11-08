@@ -23,8 +23,8 @@ Example: Input
 3. Phân tích kết quả
     * Người kiểm tra xác định bất kỳ ký tự đặc biệt nào không được mã hóa, thay thế hoặc lọc đúng
     * Các kí tự HTML đặc biệt cần phải được thay thế bằng HTML entities hoặc replace,encode,...
-## Prevention
-- Lọc input và ouput bằng các hàm như replace(),addslashes(),pre_match(),htmlspecialchars(),htmlentities(),...
+## Prevent
+- Lọc input và ouput bằng các hàm như replace(), addslashes(), pre_match(), htmlspecialchars(), htmlentities(),...
 ## Example
 ### Example 1:
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/001-1.png)  
@@ -73,10 +73,13 @@ Example: Input
 
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/001-11.png)
 
-- Đối với những trường hợp như thế này hacker có thể thay thế thẻ script bằng các thẻ khác như ```<a>```,```<img>```,... và chèn script độc hại thông qua HTML Event Attributes.
+- Đối với những trường hợp như thế này hacker có thể thay thế thẻ script bằng các thẻ khác như ```<a>```,```<img>```,```<input>```... và chèn script độc hại thông qua HTML Event Attributes (onerror, onload, oclick,...).
 
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/001-12.png)
 
 Result:
 
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/001-13.png)
+
+## References  
+- [XSS Filter Evasion Cheat Sheet](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)
