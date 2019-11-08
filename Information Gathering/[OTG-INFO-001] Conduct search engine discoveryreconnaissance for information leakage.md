@@ -10,7 +10,30 @@
 - Các công cụ tìm kiếm:Baidu, google, duckduckgo, yahoo...
 - Sử dụng các từ khóa tìm kiếm nâng cao như: ```stie:```,```cache```,...
 # Example
-![]()
+- Ví dụ ta có mục tiêu như sau:  
+
+![](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/image/001-1.png)
+
+- Ta sẽ dùng các công cụ để tìm kiếm thông tin liên quan đến trang web như: Thông tin quản trị viên, thông tin server ,...
+
+![](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/image/001-6.png)  
+
+- Kiểm tra file robots.txt:  
+
+![](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/image/001-7.png)  
+
+![](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/image/001-2.png)  
+
+![](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/image/001-3.png)
+
+- Các dự án của quản trị viên này tham gia: 
+
+![](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/image/001-4.png)
+
+- Test thử một project khác của quản trị viên này ta được:
+
+![](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/image/001-5.png)  
+
 # References
 ### Google Hacking Database
 https://support.google.com/webmasters/answer/70897
