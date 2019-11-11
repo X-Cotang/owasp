@@ -1,4 +1,5 @@
 # Description
+- Biết phiên bản và loại máy chủ web đang chạy cho phép người kiểm tra xác định các lỗ hổng đã biết và các khai thác thích hợp để sử dụng trong quá trình thử nghiệm. 
 # Expoit  
 - Sử dụng netcat hoặc DevTool của trình duyệt để tìm kiếm phiên bản Web server thông qua response header:  
 
