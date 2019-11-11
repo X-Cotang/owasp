@@ -1,5 +1,5 @@
 # Description
-- Phát hiện / trinh sát bằng công cụ tìm kiếm để rò rỉ thông tin là bước vô cùng quan trọng. Nó là tiền đề cho các cuộc tấn công an ninh mạng
+- Phát hiện, trinh sát bằng công cụ tìm kiếm để rò rỉ thông tin là bước vô cùng quan trọng. Nó là tiền đề cho các cuộc tấn công an ninh mạng
 
 # Exploit
 - Sử dụng search engine để tìm kiếm:
