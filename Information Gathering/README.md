@@ -1,0 +1,10 @@
+# Information Gathering
+- [OTG-INFO-001](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/%5BOTG-INFO-001%5D%20Conduct%20search%20engine%20discoveryreconnaissance%20for%20information%20leakage.md) Conduct search engine discoveryreconnaissance for information leakage  
+- [OTG-INFO-002](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/%5BOTG-INFO-002%5D%20Fingerprint%20Web%20Server%20.md) Fingerprint Web Server  
+- [OTG-INFO-003](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/%5BOTG-INFO-003%5D%20Review%20Webserver%20Metafiles%20for%20Information%20Leakage.md) Review Webserver Metafiles for Information Leakage  
+- [OTG-INFO-004](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/%5BOTG-INFO-004%5D%20Enumerate%20Applications%20on%20Webserver.md) Enumerate Applications on Webserver  
+- [OTG-INFO-005](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/%5BOTG-INFO-005%5D%20Review%20webpage%20comments%20and%20metadata%20for%20information%20leakage.md) Review webpage comments and metadata for information leakage
+- [OTG-INFO-006](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/%5BOTG-INFO-006%5D%20Identify%20application%20entry%20points.md) Identify application entry points
+- [OTG-INFO-007](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/[OTG-INFO-007]%20Map%20execution%20paths%20through%20application.md) Map execution paths through application
+- [OTG-INFO-008](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/%5BOTG-INFO-008%5D%20Fingerprint%20Web%20Application%20Framework.md) Fingerprint Web Application Framework
+- [OTG-INFO-009](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/%5BOTG-INFO-009%5D%20Fingerprint%20Web%20Application.md) Fingerprint Web Application
