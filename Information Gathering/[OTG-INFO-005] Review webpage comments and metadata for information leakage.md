@@ -14,6 +14,6 @@ OR:
 
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/image/005-3.png)  
 
-- Thẻ ```<Meta>``` cũng có thể quản lí robot:  
+- Thẻ ```<Meta>``` cũng có thể quản lí robot hay HTTP response headers:  
 
-![](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/image/005-4.png) 
+![](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/image/005-5.png) 

@@ -19,4 +19,4 @@
 * Ngoài ra cần xác định các header đặc biệt. VD: Server: BIG-IP
 # Example
 
-![](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/image/006-1.png)  
+![](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/image/006-1.PNG)  
