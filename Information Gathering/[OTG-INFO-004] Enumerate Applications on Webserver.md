@@ -50,9 +50,9 @@ Ví dụ sau đây cho thấy cách xác định name server cho www.owasp.org b
 
 - DNS inverse queries  
 Quá trình này tương tự như quy trình trước, nhưng phụ thuộc vào các bản ghi DNS (PTR). Thay vì yêu cầu chuyển vùng, hãy thử đặt loại bản ghi thành PTR và đưa ra truy vấn trên địa chỉ IP đã cho. Nếu người kiểm tra may mắn, họ có thể lấy lại mục nhập tên DNS. Kỹ thuật này dựa trên sự tồn tại của bản đồ tên từ IP đến biểu tượng, không được bảo đảm.  
-- Web-based DNS searches
+- Web-based DNS searches  
 Kiểu tìm kiếm này gần giống với DNS zone transfer
-- Reverse-IP services
+- Reverse-IP services  
 Dịch vụ Reverse-IP tương tự như các truy vấn DNS-Reverse, với sự khác biệt là người kiểm tra truy vấn ứng dụng dựa trên web thay vì máy chủ tên. Có một số dịch vụ như vậy có sẵn. Vì họ có xu hướng trả về kết quả một phần (và thường khác nhau), tốt hơn là sử dụng nhiều dịch vụ để có được phân tích toàn diện hơn.
-- Googling
+- Googling  
 Sau khi thu thập thông tin từ các kỹ thuật trước đó, người kiểm tra có thể dựa vào các công cụ tìm kiếm để có thể tinh chỉnh và tăng phân tích của họ.
