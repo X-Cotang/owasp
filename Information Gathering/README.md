@@ -8,3 +8,4 @@
 - [OTG-INFO-007](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/[OTG-INFO-007]%20Map%20execution%20paths%20through%20application.md) Map execution paths through application
 - [OTG-INFO-008](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/%5BOTG-INFO-008%5D%20Fingerprint%20Web%20Application%20Framework.md) Fingerprint Web Application Framework
 - [OTG-INFO-009](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/%5BOTG-INFO-009%5D%20Fingerprint%20Web%20Application.md) Fingerprint Web Application
+- [OTG-INFO-010](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/%5BOTG-INFO-010%5D%20Map%20Application%20Architecture.md) Map Application Architecture
