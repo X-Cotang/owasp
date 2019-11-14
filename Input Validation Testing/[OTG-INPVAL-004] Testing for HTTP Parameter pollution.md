@@ -33,3 +33,11 @@ security_token=attackertoken&blogID=attackerblogidvalue&blogID=victimblogidvalue
 ```
 # How to test
 - Thực hiện kiểm tra đối với các tham số của phương thức GET và POST
+### Server-side HPP
+1. Gửi yêu cầu HTTP chứa tên và giá trị tham số tiêu chuẩn và ghi lại phản hồi HTTP.
+2. Thay thế giá trị tham số bằng giá trị giả mạo, gửi và ghi lại phản hồi HTTP.
+3. Gửi yêu cầu mới kết hợp bước (1) và (2). Một lần nữa, lưu phản hồi HTTP  
+4. So sánh các câu trả lời thu được trong tất cả các bước trước đó. Nếu phản hồi từ (3) khác với (1) và phản hồi từ (3) cũng khác với (2) có thể kích hoạt các lỗ hổng HPP.  
+### Client-side HPP
+- Để kiểm tra các lỗ hổng HPP phía máy khách, cần xác định bất kỳ form hoặc hành động nào cho phép người dùng nhập và hiển thị kết quả của đầu vào đó cho người dùng.
+- Cách test giống với sever-side HPP

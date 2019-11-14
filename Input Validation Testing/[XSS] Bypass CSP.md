@@ -26,3 +26,21 @@ Ta sẽ chuyển đổi chuỗi cipher text ```<script>alert(1)</script>``` về
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/adv2-6.png)  
 
 - Giá trị ```default-src: 'self'``` chỉ cho phép nạp script từ các file có cùng URL nhưng không cho phép nạp code inline.  
+
+- Bây giờ chúng ta sẽ lợi dụng chính trang này để tạo ra một nguồn script hợp lệ  
+
+![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/adv2-7.png)  
+
+![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/adv2-8.png)  
+
+![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/adv2-9.png)  
+
+- Tiến hành lấy cookie của admin:  
+
+![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/adv2-10.png)  
+
+![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/adv2-11.png)  
+
+![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/adv2-13.png)  
+
+![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/adv2-14.png)  
