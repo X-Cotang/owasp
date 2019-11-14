@@ -17,11 +17,11 @@ Ta sẽ chuyển đổi chuỗi cipher text ```<script>alert(1)</script>``` về
 
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/adv2-4.png)  
 
-- Tab ```<script>``` bị đỏ. Xem bảng console:  
+- Tab ```<script>``` bị đỏ. Xem nguyên nhân trong tab console:  
 
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/adv2-5.png)   
 
-- CSP đã chặn tài nguyên ở inline!!! :(
+- Thì ra CSP đã chặn tài nguyên ở inline!!! :(
 
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/adv2-6.png)  
 
