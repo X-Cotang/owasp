@@ -75,3 +75,23 @@ SELECT * FROM users WHERE uname = 'admin' OR 1=1 # AND password='';
 
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/005-9.png) 
 
+# Các kĩ thuật khai thác sql
+### SQL boolean base
+- Boolean based: Cơ sở của kỹ thuật này là việc so sánh đúng sai để tìm ra từng ký tự của những thông tin như tên bảng, tên cột… Khi mà chúng ta không thể sử dụng kĩ thuật UNION BASE
+
+
+##### Example:
+- Trang web sau kiểm tra tham số id. Nếu id tồn tại thì thông báo đăng nhập thành công, ngược lại thì thất bại.  
+
+![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/005-10.png) 
+![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/005-11.png) 
+
+- Bây giờ ta sẽ chèn vào câu truy vấn một mệnh đề true-false.
+```sql
+-1' OR 1=1 -- -
+```
+- Như ta đã biết 'flase' OR 'true' eq 'true',  'flase' OR 'false' eq 'false'. Hoặc ta có thể sử dụng AND.
+
+![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/005-12.png) 
+![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/005-13.png)  
+
