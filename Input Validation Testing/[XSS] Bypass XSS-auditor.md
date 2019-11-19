@@ -28,3 +28,14 @@
 - https://chromium-review.googlesource.com/c/chromium/src/+/1417872  
 - (write-up:pwn2win) https://github.com/lbherrera/writeups/tree/master/pwn2win-2019/calc
 - (csp+xss auditor+gg jsonp) https://corb3nik.github.io/blog/ins-hack-2019/bypasses-everywhere
+- https://drx.home.blog/2019/07/31/xss-cross-site-scripting-part-3-xss-auditor/#more-1104
+
+
+
+
+
+
+
+
+
+- (xs-search ggctf) https://github.com/fbsamples/fbctf-2019-challenges/tree/master/web/secret_note_keeper

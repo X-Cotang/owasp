@@ -95,3 +95,29 @@ SELECT * FROM users WHERE uname = 'admin' OR 1=1 # AND password='';
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/005-12.png) 
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/005-13.png)  
 
+- Tiến hành lấy tên cơ sở dữ liệu:
+
+![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/005-14.png)  
+
+- Do tên cơ sở dữ liệu rất dài nên chúng ta cần viết một đoạn script để lấy tên cơ sở dữ liệu.
+
+![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/005-15.png) 
+
+##### Tối ưu hóa tấn công sql blind
+1. Sử dụng thuật toán tìm kiếm nhị phân.
+    Việc sử dụng sqlblind truyền thống là đang sử dụng việc tìm kiếm tuần tự. Tức là sẽ tìm kiếm kí tự lần lượt theo bảng chữ cái. Như vậy việc tìm kiếm sẽ rất là tốn thời gian nếu kí tự cần tìm ở cuối danh sách. Ở đây ta sẽ sử dụng thuật toán tìm kiếm nhị phân để tối ưu hóa thời gian tấn công.
+    Xét ví dụ trên, ta có payload:
+    ```sql
+    1' AND ascii(SUBSTR(database(),1,1))<100 -- -
+    ```
+    payload trên lấy number ascii của chữ cái đầu tiên trong tên của database và so sánh với 100.
+
+    ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/005-16.png)
+    ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/005-17.png)
+
+    Như chúng ta thấy chữ cái đầu tiên trong tên của database là "l" tương ứng với number 108 trong bảng mã ascii. Cho nên nếu chúng ta so sánh nó nhỏ hơn 100 thì sẽ nhận được thông báo dạng false, ngược lại ta sẽ nhận được thông báo dạng true.
+
+    ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/005-18.png)
+2. Tối ưu hóa bằng cách sử dụng kỹ thuật dịch bit (Bit Shifing)
+    Mỗi ký tự đều tương ứng với một giá trị trong bảng mã ASCII. Giá trị này từ 0 đến 127 đối với hệ cơ số thập phân, nếu chuyển sang hệ nhị phân thì giá trị này sẽ được biểu diễn bằng 7 bit
+    
