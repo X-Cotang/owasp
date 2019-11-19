@@ -24,6 +24,7 @@
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/adv-4.png)  
 
 # References
-https://medium.com/bugbountywriteup/xss-auditor-the-protector-of-unprotected-f900a5e15b7b  
-https://chromium-review.googlesource.com/c/chromium/src/+/1417872  
-write-up:pwn2win- https://github.com/lbherrera/writeups/tree/master/pwn2win-2019/calc
+- https://medium.com/bugbountywriteup/xss-auditor-the-protector-of-unprotected-f900a5e15b7b  
+- https://chromium-review.googlesource.com/c/chromium/src/+/1417872  
+- (write-up:pwn2win) https://github.com/lbherrera/writeups/tree/master/pwn2win-2019/calc
+- (csp+xss auditor+gg jsonp) https://corb3nik.github.io/blog/ins-hack-2019/bypasses-everywhere

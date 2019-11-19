@@ -19,7 +19,7 @@
 # How to test
 - Vì tiêu chuẩn HTML không hỗ trợ các phương thức yêu cầu ngoài GET hoặc POST, chúng tôi sẽ cần tạo các yêu cầu HTTP tùy chỉnh để kiểm tra các phương thức khác
 ### Manual HTTP verb tampering testing
-1. Crafting custom HTTP requests 
+1. Crafting custom HTTP requests  
 Mỗi yêu cầu HTTP 1.1 tuân theo định dạng và cú pháp cơ bản sau. Các yếu tố được bao quanh bởi dấu ngoặc [] là theo ngữ cảnh cho ứng dụng của bạn. Dòng mới trống ở cuối là bắt buộc.  
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/003-0.png)
 
@@ -54,10 +54,10 @@ Mỗi yêu cầu HTTP 1.1 tuân theo định dạng và cú pháp cơ bản sau.
 
     ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/003-8.png)
 2. Sending HTTP requests 
-- Sử dụng netcat hoặc các công cụ tương tự gửi request lên server 
-```nc www.example.com 80 < OPTIONS.http.txt```
+    * Sử dụng netcat hoặc các công cụ tương tự gửi request lên server 
+    ```nc www.example.com 80 < OPTIONS.http.txt```
 3. Parsing HTTP responses 
-- Mặc dù mỗi phương thức HTTP có thể có khả năng trả về các kết quả khác nhau, nhưng chỉ có một kết quả hợp lệ duy nhất cho tất cả các phương thức khác ngoài GET và POST.
-- Một ví dụ về thử nghiệm thất bại (nghĩa là, máy chủ hỗ trợ ```OPTION``` mặc dù không cần nó):  
+    * Mặc dù mỗi phương thức HTTP có thể có khả năng trả về các kết quả khác nhau, nhưng chỉ có một kết quả hợp lệ duy nhất cho tất cả các phương thức khác ngoài GET và POST.
+    * Một ví dụ về thử nghiệm thất bại (nghĩa là, máy chủ hỗ trợ ```OPTION``` mặc dù không cần nó):  
 
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/003-9.png)

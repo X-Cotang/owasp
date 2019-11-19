@@ -44,3 +44,10 @@ Ta sẽ chuyển đổi chuỗi cipher text ```<script>alert(1)</script>``` về
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/adv2-13.png)  
 
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/adv2-14.png)  
+
+# References
+- (google jsonp) https://github.com/jacopotediosi/Writeups/tree/master/CTF/CSAW-Quals-2019/Web/BabyCSP-50
+- https://ctftime.org/task/7020
+- https://ctftime.org/writeup/16642
+- (google jsonp)https://corb3nik.github.io/blog/ins-hack-2019/bypasses-everywhere
+- https://jbz.team/inshack2019/Bypasses_Everywhere
