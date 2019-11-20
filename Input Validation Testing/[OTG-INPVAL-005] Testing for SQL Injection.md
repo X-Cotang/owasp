@@ -123,11 +123,23 @@ SELECT * FROM users WHERE uname = 'admin' OR 1=1 # AND password='';
 
     ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/005-19.png)
 
-    Việc dịch bit sẽ được thực hiện như sau:
+    Việc dịch bit sẽ được thực hiện dựa trên nguyên lí như sau:
 
     ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/005-20.png)  
 
     ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/005-21.png)  
 
     ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/005-22.png)
+
+    ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/005-23.png)
+
+    So với phương pháp blind truyền thống phương pháp Bit Shifing tỏ ra vượt trội hơn hẳn khi chỉ tốn 7 bước để tìm ra một kí tự thay vì 128 bước(trong trường hợp xấu nhất với chuỗi không có kí tự đặc biệt) như phương pháp truyền thống.
+
+    Tiếp tục với ví dụ trên:
+
+    ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/005-24.png)
+    ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/005-25.png)
+    ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/005-26.png)
+    ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/005-27.png)
+
 
