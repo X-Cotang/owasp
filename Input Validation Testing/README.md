@@ -20,3 +20,4 @@
 ### Advanced
 - [(XSS) Bypass XSS-Auditor](https://github.com/X-Cotang/owasp/blob/master/Input%20Validation%20Testing/%5BXSS%5D%20Bypass%20XSS-auditor.md)
 - [(XSS) Bypass CSP](https://github.com/X-Cotang/owasp/blob/master/Input%20Validation%20Testing/%5BXSS%5D%20Bypass%20CSP.md)
+- [(SQLi) Error-based](https://github.com/X-Cotang/owasp/blob/master/Input%20Validation%20Testing/%5BSQLi%5D%20Error-Based.md)

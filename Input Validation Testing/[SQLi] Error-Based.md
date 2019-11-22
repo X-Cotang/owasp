@@ -19,6 +19,6 @@
 
 ![](https://github.com/X-Cotang/owasp/blob/master/Input%20Validation%20Testing/image/sqli-error-3.png)
 
-- Viết script dump toàn bộ cơ sở dữ liệu  
+- Viết script để dump toàn bộ cơ sở dữ liệu  
 
 ![](https://github.com/X-Cotang/owasp/blob/master/Input%20Validation%20Testing/image/sqli-error-1.gif)
