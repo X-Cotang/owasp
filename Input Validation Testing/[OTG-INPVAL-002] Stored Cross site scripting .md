@@ -65,3 +65,5 @@ Ta thấy 'Message' đã được filter rất chặt chẽ nhưng 'Name' thì k
 
 # References  
 - [XSS Filter Evasion Cheat Sheet](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)
+- https://www.noob.ninja/2017/11/local-file-read-via-xss-in-dynamically.html 
+- https://tradahacking.vn/xss-th%C3%B4ng-qua-path-9f305f2484f9
