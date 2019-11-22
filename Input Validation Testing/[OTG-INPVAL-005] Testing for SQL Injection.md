@@ -203,3 +203,4 @@ User input:
 
 # References
 - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection
+- https://github.com/payloadbox/sql-injection-payload-list
