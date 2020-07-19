@@ -28,7 +28,7 @@ Stite: shop.vn
 Trang đăng nhập của quản trị viên bị ẩn: login.shop.vn
 ```
 
-**Approaches to address issue 2 - non-standard ports**
+**Approaches to address issue 2 - non-standard ports**  
 ![](https://github.com/huyenlamchiton/owasp/blob/master/Information%20Gathering/image/004-1.png)  
 
 - Theo ví dụ trên ta có :
