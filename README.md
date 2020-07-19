@@ -7,7 +7,7 @@ Các cuộc tấn công sẽ được thực hiện mà không có bất kỳ th
 - ##### Hộp xám (gray box):
 Một phần thông tin về mạng nội bộ và ngoại sẽ được cung cấp bởi khách hàng và Pentester sẽ đánh giá an ninh mạng dựa trên đó.
 - ##### Hộp trắng (white box):
-Các thông tin về mạng nội bộ và ngoại sẽ được cung cấp bởi khách hàng và Pentester sẽ đánh giá an ninh mạng dựa trên đó.
+Các thông tin về mạng nội bộ và ngoại sẽ được cung cấp bởi khách hàng và Pentester sẽ đánh giá an ninh mạng dựa trên thông tin đó.
 
 ### Penetration Testing Execution Standard 
 PTES gồm 7 giai đoạn :
